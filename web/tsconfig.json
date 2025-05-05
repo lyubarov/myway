@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "~components/*": ["components/*"],
+      "~screens/*": ["screens/*"],
+      "~navigation/*": ["navigation/*"],
+      "~appTypes/*": ["appTypes/*"],
+      "~utils/*": ["utils/*"]
+    },
+    "declaration": true, // 🔥 Вимикає створення .d.ts файлів
+    "declarationMap": true, // 🔥 Забороняє генерацію карт .d.ts
+    "emitDeclarationOnly": false, // 🔥 Не генерує лише декларації
+    "moduleResolution": "node",
+    "noEmit": false, // 🔥 Вмикає генерацію файлів при компіляції
+    "outDir": "./dist", // 🔥 Усі білдовані файли будуть у dist
+    "rootDir": "./src",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "assets",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
