@@ -1,0 +1,80 @@
+{
+  "expo": {
+    "name": "MyWay",
+    "slug": "myway",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "packagerOpts": {
+      "sourceExts": [
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "svgx"
+      ],
+      "transformer": "node_modules/react-native-svg-transformer/index.js"
+    },
+    "splash": {
+      "image": "./assets/avatar-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.myway.dev767",
+      "googleServicesFile": "./services/GoogleService-Info.plist",
+      "usesAppleSignIn":true,
+      "infoPlist": {
+        "NSMotionUsageDescription": "Needs Permission for Steps",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "icon": "./assets/avatar-icon.png" 
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/avatar-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.myway.dev767",
+      "icon": "./assets/avatar-icon.png",
+      "googleServicesFile": "./services/google-services.json",
+      "useNextNotificationsApi": true,
+
+      "permissions": [
+      ]
+    },
+    "plugins": [
+      "@react-native-google-signin/google-signin",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/crashlytics",
+      "expo-image-picker",
+      "expo-apple-authentication",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/avatar-icon.png"
+    },
+    "scheme":["facebookLogin","fb2226248151106494"],
+    "extra": {
+      "LIQPAY_PUBLIC_KEY":"sandbox_i93249032337",
+      "LIQPAY_PRIVATE_KEY":"sandbox_FuiCWsCicf0hjntqYMIsZVb0XxSofOcTeeU1ZhqM",
+
+
+      "eas": {
+        "projectId": "fed65edb-159b-4e5f-aca5-8113a9d25be2"
+      }
+    },
+    "owner": "commit_appwebian"
+  }
+}
